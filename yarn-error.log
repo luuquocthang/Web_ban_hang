@@ -1,0 +1,84 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\tuyentt2\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\tuyentt2\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git LFS;C:\Program Files (x86)\GitExtensions;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin;C:\Program Files (x86)\GrapeCity\SAManager;C:\Program Files\SQL Anywhere 17\bin64;C:\Program Files\SQL Anywhere 17\bin32;C:\Users\tuyentt2\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\tuyentt2\AppData\Roaming\npm;C:\Users\tuyentt2\AppData\Local\Yarn\bin;C:\Program Files (x86)\ActiveReportsNET11\DesignerLicense;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@angular/common/-/common-5.2.10.tgz: Request failed "500 Internal Server Error"
+      at ResponseError.ExtendableBuiltin (C:\Program Files (x86)\Yarn\lib\cli.js:212:66)
+      at new ResponseError (C:\Program Files (x86)\Yarn\lib\cli.js:318:124)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:61933:26)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at Request.module.exports.Request.onRequestResponse (C:\Program Files (x86)\Yarn\lib\cli.js:134041:10)
+      at emitOne (events.js:116:13)
+      at ClientRequest.emit (events.js:211:7)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:543:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:112:17)
+
+npm manifest: 
+  {
+    "name": "cart",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build --prod",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^5.0.0",
+      "@angular/common": "^5.0.0",
+      "@angular/compiler": "^5.0.0",
+      "@angular/core": "^5.0.0",
+      "@angular/forms": "^5.0.0",
+      "@angular/http": "^5.0.0",
+      "@angular/platform-browser": "^5.0.0",
+      "@angular/platform-browser-dynamic": "^5.0.0",
+      "@angular/router": "^5.0.0",
+      "core-js": "^2.4.1",
+      "rxjs": "^5.5.2",
+      "zone.js": "^0.8.14"
+    },
+    "devDependencies": {
+      "@angular/cli": "1.6.2",
+      "@angular/compiler-cli": "^5.0.0",
+      "@angular/language-service": "^5.0.0",
+      "@types/jasmine": "~2.5.53",
+      "@types/jasminewd2": "~2.0.2",
+      "@types/node": "~6.0.60",
+      "codelyzer": "^4.0.1",
+      "jasmine-core": "~2.6.2",
+      "jasmine-spec-reporter": "~4.1.0",
+      "karma": "~1.7.0",
+      "karma-chrome-launcher": "~2.1.1",
+      "karma-cli": "~1.0.1",
+      "karma-coverage-istanbul-reporter": "^1.2.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.1.2",
+      "ts-node": "~3.2.0",
+      "tslint": "~5.7.0",
+      "typescript": "~2.4.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
