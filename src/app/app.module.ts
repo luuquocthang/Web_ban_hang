@@ -1,42 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+// Core Dependencies
+import { RouterModule } from "@angular/router";
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
-import { routes } from './app.router';
+// Modules
+import { UserModule } from "./user/user.module";
+import { ProductModule } from "./product/product.module";
+import { IndexModule } from "./index/index.module";
+import { LoaderSpinnerModule } from "./modules/loader-spinner/loader-spinner";
 
-import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { CartComponent } from './cart/cart.component';
-import { ProductsComponent } from './products/products.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-// import { ProductsComponent } from './products/products.component';
-// import { HomeComponent } from './home/home.component';
-// import { CartComponent } from './cart/cart.component';
-// import { SidebarComponent } from './sidebar/sidebar.component';
+// Configurations
+import { AppRoutes } from "./app.routing";
 
-
+// Components
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    CartComponent,
-    ProductsComponent,
-    SidebarComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-    routes
+    IndexModule,
+    ProductModule,
+    UserModule,
+    LoaderSpinnerModule,
+    RouterModule.forRoot(AppRoutes, { enableTracing: true })
   ],
-  providers: [
-  	{provide: LocationStrategy, useClass: HashLocationStrategy}
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}
