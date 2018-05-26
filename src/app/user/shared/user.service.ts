@@ -28,7 +28,7 @@ export class UserService {
   }
 
   createUser(data: User) {
-    data.location = this.location;
+    // data.location = this.location;
     data.createdOn = moment(new Date()).format("X");
     this.users.push(data);
   }

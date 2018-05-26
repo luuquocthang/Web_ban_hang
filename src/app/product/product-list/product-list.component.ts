@@ -14,7 +14,7 @@ import { ToastyConfig, ToastOptions, ToastyService } from "ng2-toasty";
 export class ProductListComponent implements OnInit {
   productList: Product[];
 
-  brands = ["All", "Google", "Apple", "Samsung", "OnePlus", "Lenovo", "Nokia"];
+  brands = ["All", "Clother"];
 
   selectedBrand: "All";
 
@@ -25,24 +25,25 @@ export class ProductListComponent implements OnInit {
     private spinnerService: LoaderSpinnerService,
     private toastyConfig: ToastyConfig,
     private toastyService: ToastyService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.getAllProducts();
   }
 
   getAllProducts() {
-    this.spinnerService.show();
-    const x = this.productService.getProducts();
-    x.snapshotChanges().subscribe(product => {
-      this.spinnerService.hide();
-      this.productList = [];
-      product.forEach(element => {
-        const y = element.payload.toJSON();
-        y["$key"] = element.key;
-        this.productList.push(y as Product);
-      });
-    });
+    // this.spinnerService.show();
+    // const x = this.productService.getProducts();
+    // x.snapshotChanges().subscribe(product => {
+    //   this.spinnerService.hide();
+    //   this.productList = [];
+    //   product.forEach(element => {
+    //     const y = element.payload.toJSON();
+    //     y["$key"] = element.key;
+    //     this.productList.push(y as Product);
+    //   });
+    // });
+    this.productList = this.productService.getProducts();
   }
 
   removeProduct(key: string) {

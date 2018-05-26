@@ -29,17 +29,18 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   }
 
   getProductDetail(id: string) {
-    this.spinnerService.show();
-    const x = this.productService.getProductById(id);
-    x.snapshotChanges().subscribe(product => {
-      this.spinnerService.hide();
-      const y = product.payload.toJSON() as Product;
+    // this.spinnerService.show();
+    // const x = this.productService.getProductById(id);
+    // x.snapshotChanges().subscribe(product => {
+    //   this.spinnerService.hide();
+    //   const y = product.payload.toJSON() as Product;
 
-      console.log("getProduct id: " + id, y);
+    //   console.log("getProduct id: " + id, y);
 
-      y["$key"] = id;
-      this.product = y;
-    });
+    //   y["$key"] = id;
+    //   this.product = y;
+    // });
+    this.product = this.productService.getProductById(id);
   }
 
   ngOnDestroy() {

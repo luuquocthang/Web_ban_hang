@@ -75,8 +75,10 @@ export class AuthService {
   }
 
   getAllUsers() {
+    debugger;
     const x = this.userService.getUsers();
     x.snapshotChanges().subscribe(user => {
+      debugger;
       this.usersList = [];
       user.forEach(element => {
         const y = element.payload.toJSON();
