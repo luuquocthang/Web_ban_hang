@@ -1,0 +1,2 @@
+D:\ShoppingApi\Shopping\Shopping.Tests\obj\Debug\Shopping.Tests.csprojAssemblyReference.cache
+D:\ShoppingApi\Shopping\Shopping.Tests\obj\Debug\Shopping.Tests.csproj.CoreCompileInputs.cache
